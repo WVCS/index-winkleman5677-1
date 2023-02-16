@@ -1,0 +1,99 @@
+<html>
+  <nav>
+      <li><a href="index.html"> My Home Page </a> </li>
+      <li><a href="https://goanimate-v2.fandom.com/wiki/Roxy%27s_DXC_Friends?file=Roxy%2527s_DXC_Friends.png"> Roxy's DC Friends </a> </li>
+      <li><a href="https://goanimate-v2.fandom.com/wiki/Imani_Jelani?file=Imani-removebg-preview.png"> Imani Jelani </a> </li>
+    </nav>
+  <br>
+  <br>
+<center>
+    <h1> Royal Lion's Garden </h1>
+  </center>
+  </body>
+  <div class="wrapper">
+    <div class="A"> This restaurant is the best one out in the world. You can enjoy a lot of fun games and wonderful events. You can also enjoy the wonderful sightings around you and the warm ocean in front of you. Always be sure to help us to raise enough money. Always be sure to ready our description down below for more information. Enjoy your stay with a warm and pleasure welcoming. Always look down for more information and foods. Thanks! </div>
+    <div class="B"> Sports and Games: baseball, soccerball, bowling, golf, Connect 4, Monopoly, Hockey, poker, video games, Jenga, and Maze </div>
+    <div class="C"> Street and address: 8099 Sullivan lane on Convoy Street </div>
+    <div class="D"> Rules: No smoking, chewing gum, and bad behaviors. Always keep distances from other people and make good choices. Be sure to look out for your children or infants. </div>
+    <div class="E"> Where to contact us: denniswang06@outlook.com or 858-837-6533 </div>
+    <div class="F"> Foods that we serve: Seafoods, fried onion rings, red lobster, Kobe beef and chicken, grilled salmon, saffron, anngulas, edible golden salad, risotte, and hanger steak </div>
+    <div class="G"> Free Wifi: Password: dennis3456 </div>
+    <div class="H">  Open and closing hours: Mon-Fri: 1pm-9pm, Wed: 12:30am-7:pm, Weekends: 11am-10pm  </div>
+    </div>
+<br>
+<br>
+<center>
+  <img src="https://t4.ftcdn.net/jpg/03/74/18/83/360_F_374188376_fug0Au36cVdtkGRo4uMHHNWbA82zBgdg.jpg"
+</center>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QNOYwn52y_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <p> Check this video to help you to learn more about our rules of the fancy restaurant. </p>
+  <h1> Final Notice </h1>
+  <p> If any of you are signed up to recieve the email that we sent to you. Be sure to email us questions and check our website here: www.RoyalsLionsGarden.com
+</center>
+  
+  
+  
+</html>
+
+nav {
+  list-style-type: none;
+  position: fixed;
+  Width: 200vw;
+  background-color: yellow;
+  left: 0;
+  top: 0;
+}
+li{
+  display: inline;
+  float: left;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+  color: coffee;
+}
+li:hover {
+  background-color: blue
+}
+
+.B, .C, .D, .E, .F, .G, .H {
+  max-width: 400px;
+  max-height: 100px;
+}
+
+body{
+  background-color: #17CBD5
+}
+h1 {
+  color: red;
+  font-family: 
+}
+div {
+  background-color: salmon;
+  border: dashed 2px black;
+  border-radius: 6px;
+}
+.wrapper {
+  display: grid;
+  height: 80vh;
+  grid-template: 
+    "A B C D" auto
+    "E F G H";
+  grid-row-gap: 3px;
+  grid-column-gap: 13px;
+}
+.A {
+  grid-column: 1/5;
+}
+img:hover{
+  Border:dotted 10px black;
+}
+p{
+  color: blue;
+}
+
+
+
+
+
