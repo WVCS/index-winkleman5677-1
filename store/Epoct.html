@@ -16,6 +16,14 @@
   <br>
   <body>
   <center>
+    <div id="entireDiv">
+    <form autocomplete="off">
+    <div class="autocomplete">
+    <input id="myInput" type="text" name="myBox"
+      Placeholder="Search...">
+   </div>
+   </form>
+   </div>
      <img src="logo for shopping.png" width="700vw">
      <h1> Epoct Obtaining World </h1>
     <p> Welcome to our obtaining world of Epoct and there are a lot of good products, healthy foods, and wonderful things that you can get. about our store, we sell a lot of healthy fruits and vegetables for you guys to enjoy. Also don't forget that we also sell meat products, snacks, nuts, seafoods, and condiments such as soy sauce that you can enjoy. Our store also host events such as big sales, pay days, market parties, and other events that you can check out in the table below. We do not allow any thefts, stealing, or dangerous weapons. If you have any lost or stolen items, please report to the information desk or the office to get assistance. Thanks you for all of your participations and attentions. See you next time and bye! </p>
@@ -132,6 +140,21 @@ body {
  background-attachment: fixed;
   background-size: cover; 
 }
+   .autocomplete {
+  background-color: blue;
+  cursor: help;
+}
+
+#myInput {
+  width: 90%;
+  background-color: red;
+}
+
+#entireDiv {
+  position: fixed;
+  right: 0%;
+}
+   
 h1{
   color: red;
   Font-family: serif;
@@ -339,4 +362,90 @@ function topFunction () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+   function autocomplete(inp, arr) {
+
+  var currentFocus;
+
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+
+      this.parentNode.appendChild(a);
+
+      for (i = 0; i < arr.length; i++) {
+
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+          b = document.createElement("DIV");
+
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+          b.addEventListener("click", function(e) {
+
+              inp.value = this.getElementsByTagName("input")[0].value;
+
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        currentFocus++;
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        currentFocus--;
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        e.preventDefault();
+        if (currentFocus > -1) {
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    if (!x) return false;
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var autoAnswers = ["fruits", "vegetables", "meats", "drinks", "nuts", "Ice cream", "rice", "condiments", "seafood", "frozen foods"];
+
+autocomplete(document.getElementById("myInput"), autoAnswers);
+   
   </style>
