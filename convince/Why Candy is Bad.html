@@ -30,7 +30,7 @@
     
        <h1> A call to action </h1>
       <p> Let's eat more fruits and vegetables. Eating these foods can lower your blood pressure and reduce higher chances of getting diabetes. They have a good source of vitamins and minerals to your body. They are good for your appetite. Always eat fruits and vegetabels for lunch and dinner, everyday. </p>
-      
+      <button onclick="topFunction()" id="topBtn"> Top </button>
     </center>
       </body>
     <nav>
@@ -64,4 +64,30 @@ h1{
 img:hover{
   Border:dotted 10px black;
 }
+  #topBtn {
+  position: fixed;
+  bottom: 0%;
+  font-size: 100px;
+  background-color: yellow;
+  border: dotted blue 5px;
+  padding: 30px;
+}
       </style>
+  
+  <script>
+    window.onscroll=function() {hideFunction()};
+
+function hideFunction() {
+  if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120 )
+    document.getElementById("topBtn").style.display="block";
+  else {
+    document.getElementById("topBtn").style.display="none";
+  }
+}
+
+
+function topFunction () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+  </script>
