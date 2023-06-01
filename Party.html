@@ -1,14 +1,13 @@
 <html>
-  <head>
-    <link rel="icon" href="https://w7.pngwing.com/pngs/635/702/png-transparent-party-horn-computer-icons-party-angle-holidays-text-thumbnail.png">
-    <title> My Party </title>
-  </head>
-  <body>
-    <nav>
-    <li class="navli"><a href="index.html"> My Home Page </a> </li>
+  <nav>
+      <li><a href="https://wvcs.github.io/index-winkleman5677-1/"> My Home Page </a> </li>
+      <li><a href="https://goanimate-v2.fandom.com/wiki/Roxy%27s_DXC_Friends?file=Roxy%2527s_DXC_Friends.png"> Roxy's DXC Friends </a> </li>
+      <li><a href="https://goanimate-v2.fandom.com/wiki/Imani_Jelani?file=Imani-removebg-preview.png"> Imani Jelani </a> </li>
     </nav>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <body>
     <center>
       <h1>My Party</h1>
     <p>The party is full of craziness and it includes a lot of games. It is one of the most craziest events on earth. They are the most entertained places that you can go.</p>
@@ -46,33 +45,55 @@
       <td> <img src="https://previews.123rf.com/images/konstantinos/konstantinos0812/konstantinos081200070/3959602-party-people.jpg" height=70, width=70></td>
     </tr>
   </table>
- <p> List of Different types of parties </p>
- <li> Amazing ones </li>
- <li> Calm ones </li>
- <li> Amazing ones </li>
- <li> Good ones </li>
- <li> Cool ones </li>
- <li> Awesome ones </li>
-    <p> List of party foods and drinks</p>
- <li> Fast Foods </li>
- <li> Fried Foods </li>
- <li> Fruit and vegetables </li>
- <li> Meat products </li>
- <li> Soft Drinks </li>
- <li> Sodas </li>
- <li> healthy drinks </li>
+  <br>
+  <br>
+  <br>
     </center>
   </body>
+  <div class="wrapper">
+    <div class="A"> Hello everyone and this is the GradDTAKing, welcome to my noun project and this noun project is on party. Let me explain more about partying and why it is important. For the party, it is mostly an event or a contest to get everyguests and visitors gathered around to enjoy the fresh music and the relaxing and refreshing dances. Many people like to party, because they are feeling bored with nothing to do or getting frustrated when they had things that were difficult. Parties are celebrated in many different ways and they are Birthdays, Dance, DJ, banquets, alcoholic, proms, and bachelor ones. One thing that I learned about party is that it is an event that invites guests and welsomes everyone to enjoy the refreshing and powerful beat of music. Ther are not a lot of people party all day and all night, because they have to focus on the works, doing many chorus like cleaning the yard, and being pulled to other events in other places. What if we think that we all partied for a month without stopping. This can led to health problems. They can be held in many places such as parks and other places that are right for them to be. here's what you all know about what party is and how partying can be. </div>
+    <div class="B"> Songs and musics played in parties: Funky songs, Pop songs, Classic ones, Country songs, Jazz, Rythmic musics, Novelty ones, Rock ones, and Soul music. </div>
+    <div class="C"> Party Foods: cakes, pizza, chicken legs, french fries, burgers, sweets, ice cream, chicken nuggets, salads, hotdogs, different types of cookies, drinks such as soft oens and lemonades, ice creams, and pretzels. </div>
+    <div class="D"> Types of partying, Birthdays, surprises, dances, proms, formal ones, banquets, DJ, alcoholic, balls, junior ones, and school ones. </div>
+    <div class="E"> Parties in the early history: Democratic parties, alcoholic ones, Political parties, Administration party, Federalist party, Leadership ones, and Republican ones. </div>
+    <div class="F"> Words describe partying: Awesome, amazing, cool, wonderful, fun, exciting, energetic, fantastic, terrific, great, marvelous, and lively. </div>
+    <div class="G"> Good effects of partying: Enjoy the rythmic beats, helps you to get a break from too much work, lower the levels of depression and worries, make new friends, and maintain a good social skill. </div>
+    <div class="H"> Bad effects of partying: Health problems, cancer, gain weight, causes delay of working, getting bad grades on assignments and tests, alcohol poisoning, and brutal assaults. </div>
+    </div>
 </html>
 
 <style>
-  ul {
+  nav {
+  list-style-type: none;
+  position: fixed;
+  Width: 200vw;
+  background-color: green;
+  left: 0;
+  top: 0;
+}
+li{
+  display: inline;
+  float: left;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+  color: coffee;
+}
+li:hover {
+  background-color: yellow;
+}
+ul {
    list-style-type: circle;
   line-height:90%;
 }
-
-Body{
-  Background-color: yellow;
+h1 {
+  color: yellow;
+  font-family: helvetica;
+}
+p{
+  color: red;
+  font-family: cursive;
 }
 
 Table{
@@ -91,25 +112,71 @@ td{
   color:red;
   text-align:center;
 }
+.B, .C, .D, .E, .F, .G, .H {/* max-height and width are set PIXELS */
+  max-width: 400px;
+  max-height: 100px;
+}
+
+body{
+  background-color: #17CBD5
+}
+div {
+  background-color: salmon;
+  border: dashed 2px black;
+  border-radius: 6px;
+}
+.wrapper {
+  display: grid;
+  height: 80vh;
+  grid-template: 
+    "A B C D" auto
+    "E F G H";
+  grid-row-gap: 3px;
+  grid-column-gap: 13px;
+}
+.A {
+  grid-column: 1/5;
+}
+@media only screen and (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+    background-color: black;
+}
+  body {
+    background-color: blue;
+  } 
   
-  nav {
-  list-style-type: none;
-  position: fixed;
-  Width: 200vw;
-  background-color: yellow;
-  left: 0;
-  top: 0;
-}
-.navli{
-  display: inline;
-  float: left;
-  padding: 20px;
-}
-a{
-  text-decoration: none;
-  color: coffee;
-}
-.navli:hover {
-  background-color: blue
+  .A {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .B {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .C {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .D {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .E {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .F {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .G {
+    font-size: 10px;
+    background-color: blue;
+  }
+  .H {
+    font-size: 10px;
+    background-color: blue;
+  }  
 }
 </style>
